@@ -1,6 +1,8 @@
 # React cheat sheet
 
 ## Table of contents
+* [Hooks](#hooks)
+    * [UseState](#usestate)
 * [Custom Hooks](#custom-hooks)
     * [UseFetch](#usefetch)
     * [UseLocalStorage](#uselocalstorage)
@@ -22,6 +24,48 @@ const [token] = useState(() => {
     const token = window.localStorage.getItem('my-token')
     return token || 'default-token'
 })
+```
+
+#### UseEffect
+
+Basic side effect, this will be triggerd on every render
+
+```jsx
+useEffect(() => {
+  console.log("This will be logged after every render!")
+})
+```
+
+Call once only after the component mounted
+
+```jsx
+// By passing an empty array, this will be called only once, this is the same as componentDidMount life cycle
+useEffect(() => {
+  console.log("This will be logged after the component did mount!")
+}, [])
+```
+
+Only call the side effect hook whenever the dependencies change
+
+```jsx
+const UserAvatar = ({ username }) => {
+   const [avatar, setAvatar] = useState('link-to-placeholder')
+   useEffect(() => {
+      // this will be called when the prop username changes
+      const userData = fetchUser(username)
+      setAvatar(userData.avatar)
+   }, [username])
+   
+   return (
+      <img src={avatar} alt='user-avatar' />
+   )
+}
+```
+
+Cleanup Effect
+
+```jsx
+
 ```
 
 ### Custom Hooks
