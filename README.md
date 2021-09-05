@@ -1,7 +1,8 @@
 # React cheat sheet
 
 ## Table of contents
-- [Custom Hooks](#custom-hooks)
+* [Custom Hooks](#custom-hooks)
+    * [UseFetch](#usefetch)
 
 ### Custom hooks
 
