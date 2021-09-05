@@ -3,6 +3,7 @@
 ## Table of contents
 * [Hooks](#hooks)
     * [UseState](#usestate)
+    * [UseEffect](#useeffect)
 * [Custom Hooks](#custom-hooks)
     * [UseFetch](#usefetch)
     * [UseLocalStorage](#uselocalstorage)
@@ -65,7 +66,15 @@ const UserAvatar = ({ username }) => {
 Cleanup Effect
 
 ```jsx
+useEffect(() => {
+    const clicked = () => console.log('window clicked')
+    window.addEventListener('click', clicked)
 
+    // return a clean-up function
+    return () => {
+      window.removeEventListener('click', clicked)
+    }
+}, [])
 ```
 
 ### Custom Hooks
