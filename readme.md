@@ -4,6 +4,7 @@
 * [Hooks](#hooks)
     * [UseState](#usestate)
     * [UseEffect](#useeffect)
+    * [UseContext](#usecontext)
 * [Custom Hooks](#custom-hooks)
     * [UseFetch](#usefetch)
     * [UseLocalStorage](#uselocalstorage)
@@ -76,6 +77,22 @@ useEffect(() => {
     }
 }, [])
 ```
+
+#### UseContext
+TODO: Add useContext examples 
+
+#### UseReducer
+TODO: Add useReducer examples
+
+#### UseCallback
+TODO: Add useCallback examples
+
+#### UseMemo
+TODO: Add useMemo examples
+
+#### UseRef
+TODO: Add useRef examples
+
 
 ### Custom Hooks
 
