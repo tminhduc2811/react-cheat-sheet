@@ -4,6 +4,8 @@
 * [Custom Hooks](#custom-hooks)
     * [UseFetch](#usefetch)
     * [UseLocalStorage](#uselocalstorage)
+* [To Read](#toread)
+
 
 ### Custom hooks
 
@@ -51,3 +53,5 @@ const useLocalStorage = (defaultVal, key) => {
 
 export default useLocalStorage
 ```
+### To Read
+* [Clean Architecture on Frontend](https://dev.to/bespoyasov/clean-architecture-on-frontend-4311)
