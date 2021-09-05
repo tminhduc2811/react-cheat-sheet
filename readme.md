@@ -6,8 +6,25 @@
     * [UseLocalStorage](#uselocalstorage)
 * [To Read](#to-read)
 
+### Hooks
 
-### Custom hooks
+#### UseState
+```jsx
+const [state, setState] = useState(initialStateValue)
+```
+* initialStateValue can be string, number, object, etc.
+* setState is a function to set value for `state`
+
+You can initialize state from a function
+
+```jsx
+const [token] = useState(() => {
+    const token = window.localStorage.getItem('my-token')
+    return token || 'default-token'
+})
+```
+
+### Custom Hooks
 
 #### UseFetch
 ```jsx
