@@ -3,6 +3,7 @@
 ## Table of contents
 * [Custom Hooks](#custom-hooks)
     * [UseFetch](#usefetch)
+    * [UseLocalStorage](#uselocalstorage)
 
 ### Custom hooks
 
@@ -26,4 +27,24 @@ export const useFetch = url => {
 
     return { data, error, loading }
 }
+```
+
+#### UseLocalStorage
+```jsx
+import { useEffect, useState } from "react"
+
+const useLocalStorage = (defaultVal, key) => {
+  const [value, setValue] = useState(() => {
+    const localValue = window.localStorage.getItem(key)
+    return localValue ? JSON.stringify(localValue) : defaultVal
+  })
+
+  useEffect(() => {
+    window.localStorage.setItem(key, JSON.stringify(value))
+  }, [value])
+
+  return [value, setValue]
+};
+
+export default useLocalStorage
 ```
