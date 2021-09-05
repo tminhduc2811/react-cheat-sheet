@@ -30,6 +30,9 @@ export const useFetch = url => {
 ```
 
 #### UseLocalStorage
+
+Note: This won't work for SSR
+
 ```jsx
 import { useEffect, useState } from "react"
 
